@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Solicitacao</title>
+        <script>
+            var ajax = new XMLHttpRequest();
+            ajax.open('GET', 'dados.txt', false); //false ou true | false = função sícnrona | true = função assícrona
+            ajax.send();
+            console.log(ajax);
+        </script>
     </head>
 
     <body>
