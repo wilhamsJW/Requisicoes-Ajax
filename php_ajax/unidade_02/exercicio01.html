@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <title>Solicitacao</title>
     <script>
-    var xhr = new XMLHttpRequest(); //XMLHttpRequest() = é uma API disponível em linguagens de script para navegadores web tais como JavaScript. É utilizada para enviar requisições HTTP ou HTTPS
+
+    //Fazer o código compatível com todas as versões dos navegadores
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest;
+    } else {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    //var xhr = new XMLHttpRequest(); //XMLHttpRequest() = é uma API disponível em linguagens de script para navegadores web tais como JavaScript. É utilizada para enviar requisições HTTP ou HTTPS
     xhr.open('GET', 'dados.txt'); //false ou true | false = função síncrona | true = função assíncrona
     xhr.send();
     xhr.onreadystatechange = function () { //para trabalhar com onreadystagechange tem q ser true ou não coloca nada
