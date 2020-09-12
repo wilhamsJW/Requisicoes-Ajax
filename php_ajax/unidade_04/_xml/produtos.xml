@@ -45,7 +45,7 @@
         <descricao>Here's one way to make sure your coffee stays warm during a long commute. Made of lightweight metal alloy.</descricao>
         <codigobarra>789151 823795</codigobarra>
         <tempoentrega>15</tempoentrega>
-        <precounitario>21.00</precounitario>
+        <precounitario1>21.00</precounitario1>
         <estoque>300</estoque>
         <imagemgrande>images/product_images/SteelMug_Big.jpg</imagemgrande>  
     </produto>
