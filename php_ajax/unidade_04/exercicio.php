@@ -9,9 +9,12 @@
 <body>
     <div id="listagem"></div>
     <div id="gg"></div>
+    <button onclick="loadDados();" style="color: black;">Carregar Dados</button>
 
     <script src="jquery.js"></script>
     <script>
+
+        function loadDados () {
         $.ajax({
             url: '_xml/produtos.xml'
         }).then(sucesso, falha)
@@ -38,6 +41,7 @@
         function falha() {
 
         }
+    }
     </script>
 </body>
 
