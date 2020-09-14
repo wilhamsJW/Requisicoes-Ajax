@@ -26,13 +26,14 @@
             $('#gg').html("ok");
             var elemento;
             elemento = "<ul>";
+
             $(x).find('produto').each(function() {
                 var nome = $(this).find('nomeproduto').text();
                 var preco = $(this).find('precounitario').text();
                 elemento += "<li>" + nome + " - R$  " + preco + "</li>";
             });
 
-            elemento += "<ul>";
+            elemento += "</ul>";
             $('#listagem').html(elemento);
 
 
