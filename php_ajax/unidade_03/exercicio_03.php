@@ -14,7 +14,7 @@
     <script>
         $.ajax({
             url:'nome.php'
-        }).done(function(valor){                          //done = exevuta a função quando está ok 
+        }).done(function(valor){                          //done = executa a função quando está ok 
             $('#nome').html(valor);                     
         }).fail(function(){                             //executa a função quando dá falha
             $('#nome').html("Falha no carregamento");
