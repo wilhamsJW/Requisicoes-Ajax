@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>PHP com AJAX</title>
         <script>
         function retornarProdutos() {
+            console.log("Aqui!")
             console.log(data);
         }
         </script>
