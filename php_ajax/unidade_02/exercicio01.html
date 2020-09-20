@@ -19,7 +19,7 @@
         //var xhr = new XMLHttpRequest(); //XMLHttpRequest() = é uma API disponível em linguagens de script para navegadores web tais como JavaScript. É utilizada para enviar requisições HTTP ou HTTPS
         xhr.open('GET', 'dados.txt'); //false ou true | false = função síncrona | true = função assíncrona
         xhr.onreadystatechange = function () { //para trabalhar com onreadystagechange tem q ser true ou não coloca nada
-            //console.log(xhr);
+            console.log(xhr); console.log("Aqui!")
             if (xhr.readyState == 2) {
                 console.log("REQUESIÇÃO RECEBIDA");
             }

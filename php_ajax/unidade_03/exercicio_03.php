@@ -19,7 +19,7 @@
         }).fail(function(){                             //executa a função quando dá falha
             $('#nome').html("Falha no carregamento");
         }).always(function(){                         //always = executa função independente de  qq sucesso ou falha
-            $('#msg').html("Mensagem Com Sucesso!");
+            $('#msg').html("Mensagem Com Always será enviada sempre!");
         })
     </script>
 </body>

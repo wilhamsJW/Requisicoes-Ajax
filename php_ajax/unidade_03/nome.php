@@ -1,4 +1,4 @@
 <?php
-    $nome = "Wilhams Meira Júnior";
-    echo $nome;
+    $nome = "Wilhams Meira Júnior (Ajax feito com sucesso)";
+    //echo $nome;
 ?>
