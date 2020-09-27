@@ -10,7 +10,8 @@
         <script src="jquery.js"></script>
         <script>
             $.getJSON('_json/produtos.json', function(data){
-                //console.log(data);
+                console.log("AQUI");
+                console.log(data);
                 $.each(data, function(i, value){
                   console.log(value.nomeproduto);  
                 });

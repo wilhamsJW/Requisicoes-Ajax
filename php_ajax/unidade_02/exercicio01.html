@@ -8,43 +8,44 @@
 
         function callDados() {
 
-         var xhr;   
-        //Fazer o código compatível com todas as versões dos navegadores
-        if (window.XMLHttpRequest) {
-            xhr = new XMLHttpRequest;
-        } else {
-            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            var xhr;
+            //Fazer o código compatível com todas as versões dos navegadores
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest;
+            } else {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            //var xhr = new XMLHttpRequest(); //XMLHttpRequest() = é uma API disponível em linguagens de script para navegadores web tais como JavaScript. É utilizada para enviar requisições HTTP ou HTTPS
+            xhr.open('GET', 'dados.txt'); //false ou true | false = função síncrona | true = função assíncrona
+            xhr.onreadystatechange = function () { //para trabalhar com onreadystagechange tem q ser true ou não coloca nada
+                if (xhr.readyState == 2) {
+                    console.log("REQUESIÇÃO RECEBIDA");
+                    console.log(xhr);
+                    console.log("Aqui!")
+                }
+                if (xhr.readyState == 3) {
+                    console.log("Loading... ");
+                }
+                if (xhr.readyState == 4) {
+                    console.log("REQUISIÇÃO FINALIZADA");
+                    var dom = document.getElementById('dinamico');
+                    dom.innerHTML = xhr.responseText;
+
+                    var title = document.getElementsByTagName('h1');
+                    title[0].innerHTML = xhr.responseText;
+                }
+                if (xhr.status == 404) {
+                    console.log("Página não encontrada");
+                }
+            }
+            xhr.send();
         }
 
-        //var xhr = new XMLHttpRequest(); //XMLHttpRequest() = é uma API disponível em linguagens de script para navegadores web tais como JavaScript. É utilizada para enviar requisições HTTP ou HTTPS
-        xhr.open('GET', 'dados.txt'); //false ou true | false = função síncrona | true = função assíncrona
-        xhr.onreadystatechange = function () { //para trabalhar com onreadystagechange tem q ser true ou não coloca nada
-            //console.log(xhr);
-            if (xhr.readyState == 2) {
-                console.log("REQUESIÇÃO RECEBIDA");
-            }
-            if (xhr.readyState == 3) {
-                console.log("Loading... ");
-            }
-            if (xhr.readyState == 4) {
-                console.log("REQUISIÇÃO FINALIZADA");
-                var dom = document.getElementById('dinamico');
-                dom.innerHTML = xhr.responseText;
-
-                var title = document.getElementsByTagName('h1');
-                title[0].innerHTML = xhr.responseText;
-            }
-            if (xhr.status == 404) {
-                console.log("Página não encontrada");
-            }
-        }
-        xhr.send();
-        }
-
-        function closeName () {
+        function closeName() {
             document.getElementById('dinamico').style.display = "none";
         }
-        
+
 
         /*
         var xhr = new XMLHttpRequest(),
@@ -66,9 +67,11 @@
 
 <body>
 
-    <button onclick="callDados();" >Clike em mim</button>
-    <div><h1 id="dinamico"></h1></div>
-    
+    <button onclick="callDados();">Clike em mim</button>
+    <div>
+        <h1 id="dinamico"></h1>
+    </div>
+
     <button onclick="closeName();" id="botao">Fechar</button>
 
 </body>

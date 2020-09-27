@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>PHP com AJAX</title>
+        <title>PHP com AJAX - 2020</title>
         <style>
             #curso {
                 color: red;
@@ -17,5 +17,6 @@
     <script>
         $('#curso').load('dados.txt');
     </script>
+    <h1>Teste</h1>
     </body>
 </html>

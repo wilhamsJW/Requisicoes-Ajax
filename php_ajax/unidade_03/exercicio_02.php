@@ -8,7 +8,12 @@
 
 <body>
 
+<<<<<<< HEAD
     <div id="nome" style="color: red; width: 1000px; font-size:40px"></div>
+=======
+    <div id="nome"></div>
+    
+>>>>>>> c30bb9c2d958d0b21b40b58d034c062816ca4872
     <script src="jquery.js"></script>
     <script>
         function acionarBanco(){
