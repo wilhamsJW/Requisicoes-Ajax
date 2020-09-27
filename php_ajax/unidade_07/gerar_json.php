@@ -1,6 +1,9 @@
 <?php
+
+
+    //preparar o aqr
     // abrir conexao
-    $conecta = mysqli_connect("localhost","root","","andes");
+    $conecta = mysqli_connect("localhost","root","","andes_db");
 
     $selecao = "SELECT nomeproduto, precounitario, imagempequena FROM produtos";
     $produtos = mysqli_query($conecta,$selecao);
