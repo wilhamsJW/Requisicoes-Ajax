@@ -61,6 +61,14 @@
         
         <script src="jquery.js"></script>
         <script>
+            $('#formulario_transportadora').submit(function(e){
+                e.preventDefault(); //função acionada para evitar alguns comportamentos de carregaamento padrões da página, nesse caso seria pra evitar o action do formulario, porém nem o action eu coloquei
+                alert('Pegando o botão submit');
+                //var form = $(this); //guradando o this dentro de uma variável e poderia usar apenas a variável se quisesse ou usar o this direto
+                //Quando uso o this me refiro seleção da vez, nesse caso é a ID do formulario
+                alert($(this).serialize()); //irá aparecer um alert com object object caso não tenha nada no formulario
+                //o método serialize pega todos os dados do input, text area, select e a partir daí enviar a um db.
+            })
         </script>
     </body>
 </html>
